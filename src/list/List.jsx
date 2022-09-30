@@ -2,6 +2,7 @@ import frameworks from './item'
 import React from 'react';
 import ListView from './ListView'
 import { useState } from 'react';
+import { SearchContext } from '../contexts/SearchContext';
 
 //componentes de presentación (mostrar datos) y componentes contenedores(manejo de informacion)
 
@@ -28,9 +29,9 @@ function List(){
   }
 
   return (
-    <>
-    <ListView elements={items} funcFilterItems={filterItems} />
-    </>
+    <SearchContext.Provider value={{funcFilterItems : filterItems}}>
+      <ListView elements={items}  />
+    </SearchContext.Provider>
   )
 }
 

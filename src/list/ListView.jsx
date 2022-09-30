@@ -1,11 +1,12 @@
 import React from 'react';
+import SearchInput from '../form/SearchInput';
 
 //componentes de presentación (mostrar datos) y componentes contenedores(manejo de informacion)
 
 function ListView({ elements, funcFilterItems }) {
   return (
     <div>
-      <input type="text" onChange={(ev) => funcFilterItems(ev.target.value)} />
+      <SearchInput/>
       <ul>
         {
           elements.map((nombre, index) => (
