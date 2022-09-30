@@ -3,6 +3,7 @@ import React from 'react';
 
 export const SearchContext = createContext();
 
+//manipula esa información del contexto 
 export function SearchProvider({ children }) {
   let [seacrh, setSearch] = useState();
 

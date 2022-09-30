@@ -1,10 +1,15 @@
 import React from 'react';
+import { ItemsContext } from '../contexts/ItemContext';
 import SearchInput from '../form/SearchInput';
+import { useContext } from 'react';
 
 
 //componentes de presentación (mostrar datos) y componentes contenedores(manejo de informacion)
 
-function ListView({ elements, funcFilterItems }) {
+function ListView() {
+
+  let elements = useContext(ItemsContext)
+
   return (
     <div>
       <SearchInput/>
